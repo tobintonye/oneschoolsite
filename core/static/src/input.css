@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  :focus-visible { outline: 2px solid #1a4fc4; outline-offset: 3px; }
+}
+@layer components {
+  /* Put your real photo at core/static/core/hero.jpg */
+  .hero-photo { background: url('hero.jpg') center/cover no-repeat, #e2e8f0; }
+  .btn { @apply inline-flex w-full items-center justify-center rounded-lg border border-brand bg-brand px-6 py-3 text-[15px] font-semibold text-white transition hover:border-brand-dark hover:bg-brand-dark sm:w-auto; }
+  .btn-ghost { @apply bg-white text-brand hover:bg-mist hover:text-brand-dark; }
+  .wrap { @apply mx-auto max-w-6xl px-5; }
+  .h2 { @apply font-display text-2xl font-extrabold leading-tight tracking-tight text-ink sm:text-[2rem]; }
+  .sec { @apply scroll-mt-16 py-16 md:py-24; }
+}
+
+@layer components {
+  .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; transition-delay: var(--d, 0ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  .bar { width: var(--w); }
+  .js .bar { width: 0; transition: width 1.3s cubic-bezier(.2,.8,.2,1) .3s; }
+  .js .in .bar, .js .bar.in { width: var(--w); }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .js .bar { width: var(--w); transition: none; }
+  }
+}

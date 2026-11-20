@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block title %}Privacy Policy | OneSchool{% endblock %}
+{% block content %}
+<article class="mx-auto max-w-3xl px-5 pb-16 pt-24 [&_h2]:text-ink [&_h2]:mb-2 [&_h2]:mt-8 [&_h2]:font-display [&_h2]:text-xl [&_h2]:font-extrabold [&_p]:mb-4">
+  <a class="text-brand underline" href="{% url 'home' %}">Back to home page</a>
+  <h1 class="my-4 font-display text-3xl font-extrabold text-ink">Privacy Policy for OneSchool</h1>
+  <p><b>Effective date:</b> January 03, 2026</p>
+  <h2>1. Purpose of data collection</h2>
+  <p>OneSchool (oneschool.ng) collects personal information strictly to facilitate school administration. Our platform functions as a "Data Processor" on behalf of the educational institutions using our service.</p>
+  <h2>2. Information we collect</h2>
+  <ul class="mb-4 list-disc space-y-1 pl-6"><li><b>Student data:</b> Names, dates of birth, academic grades, and attendance records.</li><li><b>Guardian info:</b> Contact details (email/phone) for billing and emergency notifications.</li><li><b>Staff info:</b> Credentials and professional profiles for classroom management.</li></ul>
+  <h2>3. How we use your data</h2>
+  <p>Your data is used to generate report cards, track financial status of student accounts, and secure the login environment. We utilize industry-standard encryption (AES-256) for all stored data.</p>
+  <h2>4. Third-party sharing</h2>
+  <p>We do not share, sell, or trade your personal information with third parties. Data is only disclosed when required by law or to provide the specific services requested by your school (e.g., payment processing via secured gateways).</p>
+  <h2>5. Data ownership and retention</h2>
+  <p>Schools retain ownership of their data. Upon termination of service, all institutional data is permanently deleted or returned to the school after 60 days, unless required for legal compliance.</p>
+  <h2>6. Contact us</h2>
+  <p>For privacy inquiries or to exercise your data rights, contact our Data Protection Officer at: <b>privacy@oneschool.ng</b></p>
+</article>
+{% endblock %}
